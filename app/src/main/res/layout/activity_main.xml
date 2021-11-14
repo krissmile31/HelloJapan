@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Hira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:text="Hiragana"
+        android:textColor="#BF2222"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/Kata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:fontFamily="monospace"
+        android:text="Katakana"
+        android:textColor="#BF2222"
+        android:textSize="30sp" />
+
+
+    <ScrollView
+        android:layout_width="350dp"
+        android:layout_height="951dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="33dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="951dp"
+            android:orientation="vertical">
+
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="951dp"
+                android:layout_marginBottom="0dp"
+                android:numColumns="5">
+
+            </GridView>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/HiraBtn"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="126dp"
+        android:fontFamily="casual"
+        android:foregroundGravity="right"
+        android:onClick="onClick"
+        android:text="Hiragana"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#231010"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/KataBtn"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="27dp"
+        android:fontFamily="casual"
+        android:foregroundGravity="right"
+        android:onClick="onClick"
+        android:text="Katakana"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#231010"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
