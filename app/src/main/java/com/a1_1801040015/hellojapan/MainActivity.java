@@ -66,7 +66,6 @@ public class MainActivity<i> extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 MediaPlayer mediaPlayer = MediaPlayer.create(MainActivity.this, audio[position]);
                 mediaPlayer.start();
-
             }
         });
     }
@@ -80,12 +79,12 @@ public class MainActivity<i> extends AppCompatActivity {
             HiraBtn.setBackgroundResource(R.color.purple_200);
             KataBtn.setBackground(default_background);
 
-            MotionToast.Companion.createToast(MainActivity.this,
-                    "Hiragana Alphabet!!!",
-                    MotionToast.Companion.getTOAST_SUCCESS(),
-                    MotionToast.Companion.getGRAVITY_CENTER(),
-                    MotionToast.Companion.getLONG_DURATION(),
-                    ResourcesCompat.getFont(MainActivity.this,R.font.helvetica_regular));
+//            MotionToast.Companion.createToast(MainActivity.this,
+//                    "Hiragana Alphabet!!!",
+//                    MotionToast.Companion.getTOAST_SUCCESS(),
+//                    MotionToast.Companion.getGRAVITY_CENTER(),
+//                    MotionToast.Companion.getLONG_DURATION(),
+//                    ResourcesCompat.getFont(MainActivity.this,R.font.helvetica_regular));
 
             MediaPlayer hiraPlayer = MediaPlayer.create(MainActivity.this, R.raw.hiragana);
             hiraPlayer.start();
@@ -95,14 +94,14 @@ public class MainActivity<i> extends AppCompatActivity {
                 public void run() {
                     Hira.animate().rotationYBy(180*2).setDuration(10);
                     Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.bounce);
-                    animation.setDuration(3000);
+                    animation.setDuration(10);
                     Hira.startAnimation(animation);
-                    Hira.animate().translationYBy(25).setDuration(5000);
+                    Hira.animate().translationYBy(25).setDuration(10);
                 }
             });
 
-            Hira.animate().alpha(1f).setDuration(100);
-            Kata.animate().alpha(0f).setDuration(100);
+            Hira.animate().alpha(1f).setDuration(10);
+            Kata.animate().alpha(0f).setDuration(10);
             gridView.setAdapter(hiraAdapter);
         }
 
@@ -113,12 +112,12 @@ public class MainActivity<i> extends AppCompatActivity {
             KataBtn.setBackgroundResource(R.color.purple_200);
             HiraBtn.setBackground(default_background);
 
-            MotionToast.Companion.createToast(MainActivity.this,
-                    "Katakana Alphabet!!!",
-                    MotionToast.Companion.getTOAST_SUCCESS(),
-                    MotionToast.Companion.getGRAVITY_CENTER(),
-                    MotionToast.Companion.getLONG_DURATION(),
-                    ResourcesCompat.getFont(MainActivity.this,R.font.helvetica_regular));
+//            MotionToast.Companion.createToast(MainActivity.this,
+//                    "Katakana Alphabet!!!",
+//                    MotionToast.Companion.getTOAST_SUCCESS(),
+//                    MotionToast.Companion.getGRAVITY_CENTER(),
+//                    MotionToast.Companion.getLONG_DURATION(),
+//                    ResourcesCompat.getFont(MainActivity.this,R.font.helvetica_regular));
 
             MediaPlayer kataPlayer = MediaPlayer.create(MainActivity.this, R.raw.katakana);
             kataPlayer.start();
@@ -128,9 +127,9 @@ public class MainActivity<i> extends AppCompatActivity {
                 public void run() {
                     Kata.animate().rotationYBy(180*2).setDuration(10);
                     Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.bounce);
-                    animation.setDuration(3000);
+                    animation.setDuration(10);
                     Kata.startAnimation(animation);
-                    Kata.animate().translationYBy(25).setDuration(5000);
+                    Kata.animate().translationYBy(25).setDuration(10);
                 }
             });
 
